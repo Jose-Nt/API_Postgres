@@ -23,7 +23,7 @@ def obter_dados(usuario, senha, host, base_de_dados, schema, nome_tabela):
 
     #===Realizando consulta e criando dataframe com os dados
     ponto = '.'
-    consulta_sql = f'SELECT * FROM {schema}{ponto}{nome_tabela} LIMIT 10'
+    consulta_sql = f'SELECT * FROM {schema}{ponto}{nome_tabela}'
     df = pd.read_sql_query(consulta_sql, conexao)
 
     #===Redefinindo tipos de dados não aceitos por arquivos json    
